@@ -493,3 +493,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   vidaTotal: 3
+  prefabExplosao: {fileID: 7629629295166044917, guid: 44c49f6957ee9574db644cc9ef471498, type: 3}

@@ -100,9 +100,10 @@ GameObject:
   - component: {fileID: 4645286142014881862}
   - component: {fileID: 3014168447918231677}
   - component: {fileID: 3832432423545662376}
+  - component: {fileID: 660354382648363909}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +147,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,6 +258,21 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.003080964, y: -0.04130763}
   m_Radius: 0.25044042
+--- !u!114 &660354382648363909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937753112528906950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073d72bd2a568fd409c09fe50770bdb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaMaxima: 3
+  tempoInvencibilidade: 2
+  prefabExplosao: {fileID: 7629629295166044917, guid: 44c49f6957ee9574db644cc9ef471498, type: 3}
 --- !u!1 &5685821191353703250
 GameObject:
   m_ObjectHideFlags: 0

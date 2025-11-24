@@ -34,8 +34,5 @@ public class EnemyKamikaze : MonoBehaviour
         rb.linearVelocity = transform.up * velocidade;
     }
 
-    public void ReceberDano()
-    {
-        Destroy(gameObject);
-    }
+
 }

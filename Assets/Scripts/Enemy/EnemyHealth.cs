@@ -4,6 +4,9 @@ public class EnemyHealth : MonoBehaviour
 {
     public int vidaTotal = 3;
 
+    [Header("Efeitos Visuais")]
+    public GameObject prefabExplosao;
+
     // Função genérica para receber dano
     public void ReceberDano(int dano = 1)
     {
@@ -17,6 +20,10 @@ public class EnemyHealth : MonoBehaviour
 
     void Morrer()
     {
+        if (prefabExplosao != null)
+        {
+            Instantiate(prefabExplosao, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

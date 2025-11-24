@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: 80da08759be19d941ad463e6c0afc926
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_0
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 915
+        width: 406
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb82b6bac675c745a9816c7ba8f05bd
+      internalID: -853591918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 862
+        width: 501
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4c73b316d02c440bf8dfa6ebb92781
+      internalID: 1095166494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_2
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 857
+        width: 544
+        height: 543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741c69e693d388949a705adb33b2af14
+      internalID: 489026884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 165
+        width: 479
+        height: 479
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e20f6814d6679439a7211d386145cf
+      internalID: -1086489964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_4
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 159
+        width: 471
+        height: 467
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee80f05d9990c344833dac2a1f45d8e
+      internalID: 615964192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_5
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 603
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01356054519b41d4f8f855265ff8ce53
+      internalID: 258456131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_6
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 581
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f648d87eb0c4b14c96b0990565474bb
+      internalID: -230851245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_7
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 167
+        width: 494
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f7cfc1c7edbc74693a5c51764c1c05
+      internalID: 93004982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_8
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 581
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2eaf9f43f7c67448ea902e90a1eba6
+      internalID: 1943930424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_9
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 571
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c456d3600a4464a9ff9eeb83030a0b
+      internalID: -320221438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_10
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 528
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699b28aabbe134e4e94fffd6efd24f50
+      internalID: -991423859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_11
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 472
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6af35ea13645504c8be72c4d27c77a9
+      internalID: -1443686644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_12
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 380
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71cc7a8cda725342ba8cec9efd9601e
+      internalID: 2040901802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_13
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 391
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2449aee82becd4a841348d223051bd
+      internalID: -232194981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 282
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0818008936693fe4c9fc2454794f81b7
+      internalID: -2009386296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_15
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 263
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335b7f8622177414086783bf9081582a
+      internalID: -641978508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_16
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 274
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c51289a73095ca459435d121394ef6d
+      internalID: 584032970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_17
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 168
+        width: 45
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952fd27eb7dd0a040a58a55a16f4d793
+      internalID: -1736539281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_18
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 189
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccd000bed740cf4a9cccb28fcd9675e
+      internalID: -859472433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_19
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 178
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a47207128ceba47900fb73cdec9d27
+      internalID: 276369791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: video-game-explosion-animation-pixel-art-explosion-animation-frames_20
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 155
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842a0f2bf92aff540a3fc11d7ee3273c
+      internalID: 1691527560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 25d38b7ebab456f409a7e0aff82c0d05
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_0: -853591918
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_1: 1095166494
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_10: -991423859
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_11: -1443686644
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_12: 2040901802
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_13: -232194981
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_14: -2009386296
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_15: -641978508
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_16: 584032970
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_17: -1736539281
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_18: -859472433
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_19: 276369791
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_2: 489026884
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_20: 1691527560
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_3: -1086489964
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_4: 615964192
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_5: 258456131
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_6: -230851245
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_7: 93004982
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_8: 1943930424
+      video-game-explosion-animation-pixel-art-explosion-animation-frames_9: -320221438
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

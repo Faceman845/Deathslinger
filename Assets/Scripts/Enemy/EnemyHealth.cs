@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public int vidaTotal = 3;
+    public int valorEmPontos = 100;
 
     [Header("Efeitos Visuais")]
     public GameObject prefabExplosao;
@@ -23,6 +24,10 @@ public class EnemyHealth : MonoBehaviour
         if (prefabExplosao != null)
         {
             Instantiate(prefabExplosao, transform.position, Quaternion.identity);
+        }
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AdicionarPontos(valorEmPontos);
         }
         Destroy(gameObject);
     }

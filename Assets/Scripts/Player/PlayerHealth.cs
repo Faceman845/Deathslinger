@@ -88,6 +88,10 @@ public class PlayerHealth : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             ReceberDano(1);
+            if (prefabExplosao != null)
+            {
+                Instantiate(prefabExplosao, collision.gameObject.transform.position, Quaternion.identity);
+            }
             // Destroi o inimigo ao tocar
             Destroy(collision.gameObject);
         }

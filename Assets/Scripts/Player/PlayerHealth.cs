@@ -22,6 +22,7 @@ public class PlayerHealth : MonoBehaviour
         vidaAtual = vidaMaxima;
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
+        GameManager.Instance.AtualizarVida(vidaAtual, vidaMaxima);
     }
 
     public void ReceberDano(int dano)
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
         if (estaInvencivel) return;
 
         vidaAtual -= dano;
+        GameManager.Instance.AtualizarVida(vidaAtual, vidaMaxima);
         Debug.Log($"Vida do Player: {vidaAtual}");
 
         if (vidaAtual <= 0)

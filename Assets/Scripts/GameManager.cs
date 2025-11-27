@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI textoPontuacao;
+    public TextMeshProUGUI textoVida;
 
     private int scoreAtual = 0;
+    private string vida;
 
     void Awake()
     {
@@ -27,6 +29,11 @@ public class GameManager : MonoBehaviour
     {
         scoreAtual += pontos;
         AtualizarTexto();
+    }
+
+    public void AtualizarVida(int vidaAtual, int vidaMaxima)
+    {
+        textoVida.text = "HP: " + vidaAtual + "/" + vidaMaxima;
     }
 
     void AtualizarTexto()

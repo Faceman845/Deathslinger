@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // 1. Move a nave
-        Vector2 novaPosicao = rb.position + movimentoInput * velocidade * Time.fixedDeltaTime;
+        Vector2 novaPosicao = rb.position + Time.fixedDeltaTime * velocidade * movimentoInput;
 
         // 2. Aplica o "Grampo" (Clamp) para não sair da tela
         // Clamp(valor, minimo + margem, maximo - margem)

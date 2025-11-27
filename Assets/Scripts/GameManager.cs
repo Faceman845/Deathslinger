@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI textoVida;
 
     private int scoreAtual = 0;
-    private string vida;
 
     void Awake()
     {
@@ -31,9 +30,9 @@ public class GameManager : MonoBehaviour
         AtualizarTexto();
     }
 
-    public void AtualizarVida(int vidaAtual, int vidaMaxima)
+    public void AtualizarVida(int vidaAtual)
     {
-        textoVida.text = "HP: " + vidaAtual + "/" + vidaMaxima;
+        textoVida.text = "HP: " + vidaAtual;
     }
 
     void AtualizarTexto()

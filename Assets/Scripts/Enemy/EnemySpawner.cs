@@ -3,9 +3,6 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Lista de Inimigos")]
-    // Elemento 0 = Mais Fácil
-    // Elemento 1 = Médio
-    // Elemento 2 = Difícil
     public GameObject[] prefabsInimigos;
 
     [Header("Configurações de Spawn")]

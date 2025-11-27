@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public int vidaMaxima = 3; // Vida máxima do jogador (Quantidade de Hits que pode tomar até ser destruido)
     public float tempoInvencibilidade = 2f; // Tempo de invencibilidade após receber dano
 
-    private int vidaAtual; // Vida atual do jogador
+    public int vidaAtual; // Vida atual do jogador
     private bool estaInvencivel = false; // Flag para controlar invencibilidade
 
     private SpriteRenderer spriteRenderer; // Referência ao SpriteRenderer para fazer o pisca-pisca

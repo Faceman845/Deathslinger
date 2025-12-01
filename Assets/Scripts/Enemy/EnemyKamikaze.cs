@@ -18,20 +18,20 @@ public class EnemyKamikaze : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (target == null) return; // Se o player morreu, não faz nada
+        if (target == null) return;
 
-        // 1. Descobre a direção
+        // 1. Calcula a direção para o alvo
         Vector2 direcao = (Vector2)target.position - rb.position;
         direcao.Normalize();
 
         // 2. Calcula o quanto precisa girar
-        float valorGiro = Vector3.Cross(direcao, transform.up).z;
+        float valorGiro = Vector3.Cross(direcao, transform.right).z;
 
         // 3. Aplica rotação angular
         rb.angularVelocity = -valorGiro * velocidadeRotacao;
 
         // 4. Move para frente
-        rb.linearVelocity = transform.up * velocidade;
+        rb.linearVelocity = transform.right * velocidade;
     }
 
 

@@ -44,17 +44,17 @@ public class EnemyShooter : MonoBehaviour
         // --- FASE 1: ENTRADA NA TELA ---
         if (!chegouNoPonto)
         {
-            // Move para baixo (Lembrete: Vector2.up desce porque seu sprite está invertido)
-            transform.Translate(Vector2.up * velocidadeDescida * Time.deltaTime);
+            // Move para baixo
+            transform.Translate(Vector2.down * velocidadeDescida * Time.deltaTime, Space.World);
 
-            // Verifica se já desceu o suficiente (se o Y atual é menor ou igual ao alvo)
+            // Verifica se já desceu o suficiente
             if (transform.position.y <= pontoDeParadaY)
             {
                 chegouNoPonto = true; // Ativa o modo torreta
             }
         }
 
-        // --- FASE 2: COMBATE (Só atira se já chegou e o player existe) ---
+        // --- FASE 2: COMBATE ---
         else if (playerTransform != null)
         {
             // Opcional: Faz o inimigo girar suavemente para olhar pro player
@@ -75,8 +75,8 @@ public class EnemyShooter : MonoBehaviour
         Vector3 direcao = playerTransform.position - transform.position;
         float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
 
-        // Aplica a rotação (subtraindo 90 graus para alinhar corretamente)
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angulo - 90));
+        // Aplica a rotação
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angulo));
     }
 
     void Atirar()

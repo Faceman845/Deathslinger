@@ -80,6 +80,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boss\BossController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Assets\Scripts\PowerUp\HealthBuff.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyShotgun.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boss\ClusterBomb.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\PowerUp\PowerUpSpawner.cs" />
   </ItemGroup>

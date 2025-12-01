@@ -17,20 +17,29 @@ public class EnemyShotgun : MonoBehaviour
 
     private float timerTiro;
 
-    // --- Novas variáveis de controle de parada ---
+    public float offsetRotacao = 90f;
+
     private float pontoDeParadaY;
     private bool chegouNoPonto = false;
+    private Transform playerTransform; // Referência ao Player
 
     void Start()
     {
         timerTiro = intervaloTiro;
         CalcularPontoDeParada();
+
+        // Encontra o player na cena automaticamente
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerTransform = player.transform;
+        }
     }
+
 
     void CalcularPontoDeParada()
     {
         Camera cam = Camera.main;
-        // Sorteia um ponto entre a metade (0.5) e o topo (0.8) da tela
         float alturaAleatoria = Random.Range(0.5f, 0.8f);
         Vector2 pontoNoMundo = cam.ViewportToWorldPoint(new Vector3(0.5f, alturaAleatoria, 0));
         pontoDeParadaY = pontoNoMundo.y;
@@ -38,17 +47,24 @@ public class EnemyShotgun : MonoBehaviour
 
     void Update()
     {
+        // 1. Sempre tenta olhar para o player
+        if (playerTransform != null)
+        {
+            RotacionarParaPlayer();
+        }
+
         // --- FASE 1: ENTRADA ---
         if (!chegouNoPonto)
         {
-            transform.Translate(Vector2.up * velocidadeDescida * Time.deltaTime);
+            // IMPORTANTE: Space.World para descer reto independente da rotação
+            transform.Translate(Vector2.down * velocidadeDescida * Time.deltaTime, Space.World);
 
             if (transform.position.y <= pontoDeParadaY)
             {
                 chegouNoPonto = true;
             }
         }
-        // --- FASE 2: COMBATE (Parado) ---
+        // --- FASE 2: COMBATE ---
         else
         {
             timerTiro -= Time.deltaTime;
@@ -60,19 +76,39 @@ public class EnemyShotgun : MonoBehaviour
         }
     }
 
+    void RotacionarParaPlayer()
+    {
+        // Pega a direção: Onde o player está - Onde eu estou
+        Vector3 direcao = playerTransform.position - transform.position;
+
+        // Calcula o ângulo em graus
+        float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
+
+        // Aplica a rotação no eixo Z + o Offset de correção do sprite
+        transform.rotation = Quaternion.Euler(0, 0, angulo + offsetRotacao);
+    }
+
     void AtirarShotgun()
     {
         for (int i = 0; i < quantidadePelots; i++)
         {
             float anguloAleatorio = Random.Range(-anguloDoCone / 2f, anguloDoCone / 2f);
-            // Usa Vector2.down como base
-            Vector2 direcaoCalculada = Quaternion.Euler(0, 0, anguloAleatorio) * Vector2.down;
+
+            Vector2 direcaoBase = transform.up; // Assumindo que o "nariz" é o eixo Y local
+
+            // Aplica a rotação aleatória do cone na direção base
+            Vector2 direcaoCalculada = Quaternion.Euler(0, 0, anguloAleatorio) * direcaoBase;
 
             GameObject balaObj = Instantiate(projetilPrefab, firePoint.position, Quaternion.identity);
             EnemyBullet scriptBala = balaObj.GetComponent<EnemyBullet>();
 
             scriptBala.direcao = direcaoCalculada;
 
+            // Roda o sprite da bala para acompanhar a direção
+            float anguloBala = Mathf.Atan2(direcaoCalculada.y, direcaoCalculada.x) * Mathf.Rad2Deg;
+            balaObj.transform.rotation = Quaternion.Euler(0, 0, anguloBala - 90);
+
+            // Variação de velocidade
             float velocidadeOriginal = scriptBala.velocidade;
             scriptBala.velocidade = velocidadeOriginal + Random.Range(-variacaoVelocidade, variacaoVelocidade);
         }

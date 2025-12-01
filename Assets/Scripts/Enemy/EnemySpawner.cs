@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instance;
     [Header("Lista de Inimigos")]
     public GameObject[] prefabsInimigos;
 
@@ -10,13 +11,30 @@ public class EnemySpawner : MonoBehaviour
     public float tempoMinimo = 0.5f;
     public float redutorDeTempo = 0.05f;
     public float larguraSpawnX = 8f;
+    private bool spawnPausado = false;
+
+    [Header("Chefes Recorrentes")]
+    public GameObject prefabBoss1;
+    public bool boss2JaFoiDerrotado = false;
 
     [Header("Progressão de Dificuldade")]
-    public float tempoParaAumentarNivel = 20f; // A cada 20s, desbloqueia um inimigo novo
-
+    public float tempoParaAumentarNivel = 20f;
+    public GameObject[] inimigosDesbloqueaveisAposBoss;
     private float tempoAtualSpawn;
     private float alturaTelaY;
     private float tempoDeJogo = 0f;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -30,6 +48,8 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
+        if (spawnPausado) return;
+
         // Conta o tempo total de jogo para saber a dificuldade
         tempoDeJogo += Time.deltaTime;
 
@@ -48,8 +68,53 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    public void PausarSpawning(bool pausar)
+    {
+        spawnPausado = pausar;
+
+        // Opcional: Destruir inimigos comuns que sobraram na tela para limpar a arena pro X1
+        if (pausar)
+        {
+            GameObject[] inimigos = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (var inimigo in inimigos)
+            {
+                // Não destrói o Boss (verifique se tem o script BossController)
+                if (inimigo.GetComponent<BossController>() == null)
+                {
+                    // Usa a função de explodir sem pontos que criamos antes, ou Destroy direto
+                    Destroy(inimigo);
+                }
+            }
+        }
+    }
+
+    void SpawnarBossComoInimigoComum()
+    {
+        float xAleatorio = Random.Range(-larguraSpawnX, larguraSpawnX);
+        Vector2 posicaoSpawn = new Vector2(xAleatorio, alturaTelaY);
+
+        GameObject miniBoss = Instantiate(prefabBoss1, posicaoSpawn, Quaternion.identity);
+
+        // --- O TRUQUE MÁGICO ---
+        // Acessamos o script e dizemos: "Ei, você NÃO é o chefe da fase, não pare o jogo!"
+        BossController scriptBoss = miniBoss.GetComponent<BossController>();
+        if (scriptBoss != null)
+        {
+            scriptBoss.ChefeDeFase = false;
+        }
+
+        Debug.Log("CUIDADO! O Boss 1 apareceu como inimigo comum!");
+    }
+
     void SpawnarInimigoPorDificuldade()
     {
+
+        if (boss2JaFoiDerrotado && Random.value <= 0.05f)
+        {
+            SpawnarBossComoInimigoComum();
+            return; // Sai da função para não spawnar outro inimigo junto neste frame
+        }
+
         // 1. Calcula o nível atual baseado no tempo
         int nivelAtual = Mathf.FloorToInt(tempoDeJogo / tempoParaAumentarNivel);
 
@@ -61,10 +126,11 @@ public class EnemySpawner : MonoBehaviour
 
         // 4. Instancia
         GameObject inimigoEscolhido = prefabsInimigos[indiceSorteado];
+
         float xAleatorio = Random.Range(-larguraSpawnX, larguraSpawnX);
         Vector2 posicaoSpawn = new Vector2(xAleatorio, alturaTelaY);
-
         Instantiate(inimigoEscolhido, posicaoSpawn, inimigoEscolhido.transform.rotation);
+
     }
 
     void AumentarVelocidadeSpawn()
@@ -73,6 +139,28 @@ public class EnemySpawner : MonoBehaviour
         {
             tempoEntreSpawns -= redutorDeTempo;
         }
+    }
+
+
+    public void BossDerrotado()
+    {
+        spawnPausado = false; // Volta a spawnar
+
+        // Cria uma lista temporária
+        var listaNova = new System.Collections.Generic.List<GameObject>(prefabsInimigos);
+
+        // Adiciona os desbloqueáveis
+        listaNova.AddRange(inimigosDesbloqueaveisAposBoss);
+
+        // Atualiza o array principal
+        prefabsInimigos = listaNova.ToArray();
+
+        Debug.Log("Novos inimigos desbloqueados!");
+    }
+    public void Boss2Derrotado()
+    {
+        boss2JaFoiDerrotado = true;
+        // Lógica para desbloquear mais coisas...
     }
 
     void OnDrawGizmos()

@@ -58,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 6500704860631160551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.005, y: 0.86, z: 0}
+  m_LocalPosition: {x: 0.01, y: 1.204, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -132,10 +132,10 @@ GameObject:
   - component: {fileID: 5315285762317781909}
   - component: {fileID: 2741072135471359621}
   - component: {fileID: 7167226086531893148}
-  - component: {fileID: -3360855114718204295}
   - component: {fileID: 1210625431357322147}
+  - component: {fileID: 2340718990363712438}
   m_Layer: 0
-  m_Name: EnemySpread
+  m_Name: EnemyShotgun
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,12 +201,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 714111218, guid: a93413f32a52113419816599388ff540, type: 3}
+  m_Sprite: {fileID: 504499362, guid: 9995f94dac13769489552a0b50d7d16f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.34, y: 2.16}
+  m_Size: {x: 1.57, y: 2.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -277,44 +277,49 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.34, y: 2.16}
-    newSize: {x: 1.34, y: 2.16}
+    oldSize: {x: 1.57, y: 2.55}
+    newSize: {x: 1.57, y: 2.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.57, y: -0.61}
-      - {x: 0.61, y: -0.61}
-      - {x: 0.66999996, y: -0.53}
-      - {x: 0.66999996, y: -0.16}
-      - {x: 0.55, y: 0.099999994}
-      - {x: 0.44, y: 0.47}
-      - {x: 0.32999998, y: 0.65}
-      - {x: 0.39, y: 0.71}
-      - {x: 0.38, y: 0.93}
-      - {x: 0.26, y: 1.04}
-      - {x: 0.21, y: 1.0699999}
-      - {x: -0.22, y: 1.0699999}
-      - {x: -0.38, y: 0.91999996}
-      - {x: -0.37, y: 0.7}
-      - {x: -0.32, y: 0.53999996}
-      - {x: -0.45999998, y: 0.41}
-      - {x: -0.53999996, y: 0.12}
-      - {x: -0.65999997, y: -0.17999999}
-      - {x: -0.65999997, y: -0.53999996}
-      - {x: -0.58, y: -0.61}
-      - {x: -0.53999996, y: -0.61}
-      - {x: -0.42, y: -0.53}
-      - {x: -0.22, y: -0.66999996}
-      - {x: -0.11, y: -0.91999996}
-      - {x: -0.01, y: -1.0799999}
-      - {x: 0.02, y: -1.0799999}
-      - {x: 0.04, y: -1.0699999}
-      - {x: 0.14999999, y: -0.83}
-      - {x: 0.24, y: -0.65999997}
-      - {x: 0.41, y: -0.53}
+    - - {x: 0.73499995, y: -0.965}
+      - {x: 0.78499997, y: -0.85499996}
+      - {x: 0.78499997, y: -0.39499998}
+      - {x: 0.705, y: -0.305}
+      - {x: 0.525, y: -0.114999995}
+      - {x: 0.49499997, y: 0.125}
+      - {x: 0.575, y: 0.205}
+      - {x: 0.575, y: 0.36499998}
+      - {x: 0.39499998, y: 1.175}
+      - {x: 0.275, y: 1.275}
+      - {x: 0.205, y: 1.275}
+      - {x: 0.175, y: 1.245}
+      - {x: 0.114999995, y: 1.145}
+      - {x: -0.155, y: 1.155}
+      - {x: -0.16499999, y: 1.265}
+      - {x: -0.185, y: 1.275}
+      - {x: -0.295, y: 1.275}
+      - {x: -0.39499998, y: 1.175}
+      - {x: -0.555, y: 0.505}
+      - {x: -0.575, y: 0.195}
+      - {x: -0.49499997, y: 0.125}
+      - {x: -0.53499997, y: -0.114999995}
+      - {x: -0.78499997, y: -0.385}
+      - {x: -0.78499997, y: -0.875}
+      - {x: -0.715, y: -0.965}
+      - {x: -0.45499998, y: -0.935}
+      - {x: -0.345, y: -0.955}
+      - {x: -0.285, y: -0.865}
+      - {x: -0.155, y: -0.97499996}
+      - {x: -0.044999998, y: -1.245}
+      - {x: -0.024999999, y: -1.255}
+      - {x: 0.024999999, y: -1.255}
+      - {x: 0.265, y: -0.895}
+      - {x: 0.355, y: -0.945}
+      - {x: 0.59499997, y: -0.91499996}
   m_UseDelaunayMesh: 0
 --- !u!114 &7167226086531893148
 MonoBehaviour:
@@ -331,24 +336,6 @@ MonoBehaviour:
   vidaTotal: 3
   valorEmPontos: 300
   prefabExplosao: {fileID: 7629629295166044917, guid: 44c49f6957ee9574db644cc9ef471498, type: 3}
---- !u!114 &-3360855114718204295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7421983780762197208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a482467131df0de41a3fac591da09350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadeDescida: 4
-  projetilPrefab: {fileID: 8160127236407805355, guid: fa685112e524f8b47b0b17dfefdaedbd, type: 3}
-  firePoint: {fileID: 120589695282955216}
-  intervaloTiro: 2
-  quantidadeBalas: 20
-  anguloTotalDoLeque: 90
 --- !u!95 &1210625431357322147
 Animator:
   serializedVersion: 7
@@ -359,7 +346,7 @@ Animator:
   m_GameObject: {fileID: 7421983780762197208}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8d5702cf0ae557740bb14ceae8d0ed81, type: 2}
+  m_Controller: {fileID: 9100000, guid: a26d9db589033b34588248c4ed27d3fc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -371,3 +358,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2340718990363712438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421983780762197208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccee07f8830bbc7419372b52688be20d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadeDescida: 4
+  projetilPrefab: {fileID: 8160127236407805355, guid: fa685112e524f8b47b0b17dfefdaedbd, type: 3}
+  firePoint: {fileID: 120589695282955216}
+  intervaloTiro: 2.5
+  quantidadePelots: 12
+  anguloDoCone: 45
+  variacaoVelocidade: 2

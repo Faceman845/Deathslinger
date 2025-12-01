@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 921459102}
   - component: {fileID: 921459101}
   m_Layer: 0
-  m_Name: Background _Dust
+  m_Name: Background_Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1122,6 +1122,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7421983780762197208, guid: 2d5ac56bee480024dbe3cc57067f4582, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: prefabBoss1
+      value: 
+      objectReference: {fileID: 550750839657105599, guid: 28e9de33dc257114b953980d77c34923, type: 3}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: larguraSpawnX
       value: 8.4
       objectReference: {fileID: 0}
@@ -1135,20 +1139,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: prefabsInimigos.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: 'prefabsInimigos.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7421983780762197208, guid: 2d5ac56bee480024dbe3cc57067f4582, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[1]'
       value: 
-      objectReference: {fileID: 7421983780762197208, guid: 9a4332c299b372b49a1c812fa3e83bf8, type: 3}
+      objectReference: {fileID: 7421983780762197208, guid: d5c79b4fa93f09946b246023ec5b9a62, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[2]'
       value: 
-      objectReference: {fileID: 7421983780762197208, guid: d5c79b4fa93f09946b246023ec5b9a62, type: 3}
+      objectReference: {fileID: 5437176224712007180, guid: da8efed7feb1d5e42a585757ccb91296, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[3]'
       value: 
-      objectReference: {fileID: 5437176224712007180, guid: da8efed7feb1d5e42a585757ccb91296, type: 3}
+      objectReference: {fileID: 7421983780762197208, guid: 9a4332c299b372b49a1c812fa3e83bf8, type: 3}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: 'prefabsInimigos.Array.data[4]'
+      value: 
+      objectReference: {fileID: 550750839657105599, guid: 28e9de33dc257114b953980d77c34923, type: 3}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: inimigosDesbloqueaveisAposBoss.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: 'inimigosDesbloqueaveisAposBoss.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7421983780762197208, guid: 2d4a0468509ce2442a9b327b25a08568, type: 3}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: 'inimigosDesbloqueaveisAposBoss.Array.data[1]'
+      value: 
+      objectReference: {fileID: 7421983780762197208, guid: 9ffb371d24ea18d46925ef79217557bb, type: 3}
     - target: {fileID: 8906497036865855463, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.02
@@ -1241,6 +1265,10 @@ PrefabInstance:
     - target: {fileID: 1877746247202212155, guid: 22f40b53a8a6f6e4eb99b580f9326a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3832432423545662376, guid: 22f40b53a8a6f6e4eb99b580f9326a8c, type: 3}
+      propertyPath: m_Radius
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4937753112528906950, guid: 22f40b53a8a6f6e4eb99b580f9326a8c, type: 3}
       propertyPath: m_Name

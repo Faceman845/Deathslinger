@@ -8,17 +8,22 @@ public class EnemyHealth : MonoBehaviour
     [Header("Efeitos Visuais")]
     public GameObject prefabExplosao;
 
-    // Função genérica para receber dano
+    // Função para receber dano
     public void ReceberDano(int dano = 1)
     {
         vidaTotal -= dano;
 
-        if (vidaTotal <= 0)
+        //Tenta avisar o BossController se houver
+        BossController boss = GetComponent<BossController>();
+        if (boss != null)
         {
-            Morrer();
+            boss.PiscarDano();
         }
+
+        if (vidaTotal <= 0) Morrer();
     }
 
+    // Função para matar o inimigo
     void Morrer()
     {
         if (prefabExplosao != null)

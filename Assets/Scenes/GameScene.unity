@@ -1117,6 +1117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner_PF
       objectReference: {fileID: 0}
+    - target: {fileID: 5132933223906616748, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: enemyPrefab
       value: 
@@ -1125,6 +1129,10 @@ PrefabInstance:
       propertyPath: prefabBoss1
       value: 
       objectReference: {fileID: 550750839657105599, guid: 28e9de33dc257114b953980d77c34923, type: 3}
+    - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
+      propertyPath: prefabBoss2
+      value: 
+      objectReference: {fileID: 2112328740449576518, guid: bd988aed30891ec4786a2f5cb032ce7a, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: larguraSpawnX
       value: 8.4
@@ -1139,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: prefabsInimigos.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[0]'
@@ -1152,11 +1160,11 @@ PrefabInstance:
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[2]'
       value: 
-      objectReference: {fileID: 5437176224712007180, guid: da8efed7feb1d5e42a585757ccb91296, type: 3}
+      objectReference: {fileID: 7421983780762197208, guid: 9a4332c299b372b49a1c812fa3e83bf8, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[3]'
       value: 
-      objectReference: {fileID: 7421983780762197208, guid: 9a4332c299b372b49a1c812fa3e83bf8, type: 3}
+      objectReference: {fileID: 5437176224712007180, guid: da8efed7feb1d5e42a585757ccb91296, type: 3}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: 'prefabsInimigos.Array.data[4]'
       value: 

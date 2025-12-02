@@ -117,8 +117,10 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyShotgun.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Enemy\Boss\ClusterBomb.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boss\LaserHazard.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\PowerUp\PowerUpSpawner.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Boss\Boss2Controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

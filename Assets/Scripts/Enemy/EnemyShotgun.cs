@@ -17,7 +17,7 @@ public class EnemyShotgun : MonoBehaviour
 
     private float timerTiro;
 
-    public float offsetRotacao = 90f;
+    public float offsetRotacao = 180f;
 
     private float pontoDeParadaY;
     private bool chegouNoPonto = false;
@@ -85,7 +85,7 @@ public class EnemyShotgun : MonoBehaviour
         float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
 
         // Aplica a rotação no eixo Z + o Offset de correção do sprite
-        transform.rotation = Quaternion.Euler(0, 0, angulo + offsetRotacao);
+        transform.rotation = Quaternion.Euler(0, 0, angulo - offsetRotacao);
     }
 
     void AtirarShotgun()

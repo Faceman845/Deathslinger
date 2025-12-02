@@ -14,10 +14,16 @@ public class EnemyHealth : MonoBehaviour
         vidaTotal -= dano;
 
         //Tenta avisar o BossController se houver
-        BossController boss = GetComponent<BossController>();
-        if (boss != null)
+        BossController boss1 = GetComponent<BossController>();
+        if (boss1 != null)
         {
-            boss.PiscarDano();
+            boss1.PiscarDano();
+        }
+
+        Boss2Controller boss2 = GetComponent<Boss2Controller>();
+        if (boss2 != null)
+        {
+            boss2.PiscarDano();
         }
 
         if (vidaTotal <= 0) Morrer();

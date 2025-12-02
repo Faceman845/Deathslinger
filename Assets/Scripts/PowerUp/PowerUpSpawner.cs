@@ -6,13 +6,13 @@ public class PowerUpSpawner : MonoBehaviour
     public GameObject[] prefabsPowerUps;
 
     [Header("Configurações de Spawn")]
-    public float tempoEntreSpawns = 12f;
+    public float tempoEntreSpawns = 9f;
     public float tempoMinimo = 1f;
     public float redutorDeTempo = 0.05f;
     public float larguraSpawnX = 8f;
 
     [Header("Progressão de Dificuldade")]
-    public float tempoParaAumentarNivel = 40f; // similar aos inimigos a cada 40s, desbloqueia um PowerUp novo
+    public float tempoParaAumentarNivel = 20f; // similar aos inimigos a cada 40s, desbloqueia um PowerUp novo
 
     private float tempoAtualSpawn;
     private float alturaTelaY;

@@ -1105,7 +1105,7 @@ MonoBehaviour:
   tempoMinimo: 1
   redutorDeTempo: 0.05
   larguraSpawnX: 8
-  tempoParaAumentarNivel: 40
+  tempoParaAumentarNivel: 20
 --- !u!1001 &2558149344054008957
 PrefabInstance:
   m_ObjectHideFlags: 0

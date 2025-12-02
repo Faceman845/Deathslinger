@@ -1100,11 +1100,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabsPowerUps:
   - {fileID: 8497048221228774416, guid: 4bc03e7f12f2a8647aa602c4a34b782f, type: 3}
-  tempoEntreSpawns: 4
-  tempoMinimo: 0.5
+  - {fileID: 4656775966368892968, guid: 5f24d4a4e83c548439cdcfc42fcf02a2, type: 3}
+  tempoEntreSpawns: 12
+  tempoMinimo: 1
   redutorDeTempo: 0.05
   larguraSpawnX: 8
-  tempoParaAumentarNivel: 20
+  tempoParaAumentarNivel: 40
 --- !u!1001 &2558149344054008957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1119,7 +1120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5132933223906616748, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5938988263343924728, guid: 48c0d1b89f215e2408ece0a27452503f, type: 3}
       propertyPath: enemyPrefab

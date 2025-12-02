@@ -425,6 +425,7 @@ MonoBehaviour:
   painelGameOver: {fileID: 1400677004}
   textoScoreFinal: {fileID: 1989338291}
   textoHighScore: {fileID: 801168406}
+  multiplicadorDificuldade: 1
 --- !u!4 &380271242
 Transform:
   m_ObjectHideFlags: 0

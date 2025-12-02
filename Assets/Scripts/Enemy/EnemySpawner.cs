@@ -33,6 +33,9 @@ public class EnemySpawner : MonoBehaviour
     public float tempoParaAumentarNivel = 20f;
     public GameObject[] inimigosDesbloqueaveisAposBoss;
 
+    [Header("Dificuldade Infinita")]
+    public float taxaDeCrescimento = 0.1f;
+
     private float tempoAtualSpawn;
     private float alturaTelaY;
     private float tempoDeJogo = 0f;
@@ -70,6 +73,15 @@ public class EnemySpawner : MonoBehaviour
             if (!boss2JaNasceu && tempoDeJogo >= tempoParaBoss2)
             {
                 InvocarBoss2();
+            }
+
+            if (boss2JaFoiDerrotado)
+            {
+                // Aumenta o multiplicador suavemente a cada frame
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.multiplicadorDificuldade += taxaDeCrescimento * Time.deltaTime;
+                }
             }
         }
 
@@ -162,7 +174,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnarInimigoPorDificuldade()
     {
-        if (boss2JaFoiDerrotado && Random.value <= 0.005f)
+        if (boss2JaFoiDerrotado && Random.value <= 0.05f)
         {
             SpawnarBossAleatorioComoInimigo();
             return;

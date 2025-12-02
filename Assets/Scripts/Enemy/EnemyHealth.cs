@@ -8,6 +8,20 @@ public class EnemyHealth : MonoBehaviour
     [Header("Efeitos Visuais")]
     public GameObject prefabExplosao;
 
+    void Start()
+    {
+        // Se o GameManager existir, aplicamos o multiplicador
+        if (GameManager.Instance != null)
+        {
+            float multi = GameManager.Instance.multiplicadorDificuldade;
+
+            // Aplica o multiplicador de dificuldade
+            vidaTotal = Mathf.RoundToInt(vidaTotal * multi);
+            // Aplica o multiplicador de pontos
+            valorEmPontos = Mathf.RoundToInt(valorEmPontos * multi);
+        }
+    }
+
     // Função para receber dano
     public void ReceberDano(int dano = 1)
     {

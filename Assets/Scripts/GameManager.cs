@@ -13,7 +13,10 @@ public class GameManager : MonoBehaviour
     [Header("Tela de Game Over")]
     public GameObject painelGameOver; 
     public TextMeshProUGUI textoScoreFinal; 
-    public TextMeshProUGUI textoHighScore;  
+    public TextMeshProUGUI textoHighScore;
+
+    [Header("Dificuldade Infinita")]
+    public float multiplicadorDificuldade = 1.0f;
 
     private int scoreAtual = 0;
 

@@ -54,6 +54,8 @@ public class PlayerHealth : MonoBehaviour
             Instantiate(prefabExplosao, transform.position, Quaternion.identity);
         }
 
+        GameManager.Instance.GameOver();
+
         gameObject.SetActive(false);
     }
 

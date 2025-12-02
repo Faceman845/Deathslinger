@@ -122,12 +122,12 @@ public class Boss2Controller : MonoBehaviour
         }
     }
 
-    // --- ATAQUE 2: LASER MORTAL ---
+    // --- ATAQUE 2: LASER ---
     IEnumerator AtaqueLaser()
     {
         float timer = 0f;
 
-        // Fase 1: Mirando (O Boss inteiro gira)
+        // Fase 1: Mirando
         while (timer < tempoDeMira)
         {
             if (player != null)
@@ -135,7 +135,6 @@ public class Boss2Controller : MonoBehaviour
                 Vector3 direcao = player.position - transform.position;
                 float angulo = Mathf.Atan2(direcao.y, direcao.x) * Mathf.Rad2Deg;
 
-                // AQUI ESTÁ A MUDANÇA: Giramos o 'transform' (o Boss), não a 'miraLaser'
                 transform.rotation = Quaternion.Euler(0, 0, angulo - offsetRotacao);
             }
 
@@ -144,20 +143,15 @@ public class Boss2Controller : MonoBehaviour
         }
 
         // Fase 2: DISPARO
-        // Alinhamos o visual do laser com a rotação atual do Boss
-        // Como o visual é filho do Boss, se zerarmos a rotação local dele, ele segue o pai.
         objetoLaserVisual.transform.localRotation = Quaternion.identity;
 
         objetoLaserVisual.SetActive(true); // LIGA O LASER
 
-        // (Opcional) Trava a mira: O boss para de girar enquanto atira
         yield return new WaitForSeconds(duracaoLaser);
 
         objetoLaserVisual.SetActive(false); // DESLIGA
 
         // Fase 3: Recuperação
-        // Gira suavemente de volta para a posição original (0,0,0) ou mantém girado?
-        // Geralmente resetar para 0 (olhando pra baixo) fica mais organizado pra voltar a mover.
         transform.rotation = Quaternion.Euler(0, 0, 180);
     }
 
